@@ -16,4 +16,11 @@ validates :duration, numericality: { only_integer: true, greater_than_or_equal_t
 # - description: no rules
 # - image_url: no rules
 
+belongs_to :director
+# movie.director
+
+has_many :characters
+# movie.characters
+
+
 end

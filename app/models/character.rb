@@ -14,4 +14,10 @@ validates :name, :presence => true, :uniqueness => { :scope => :dob }
 #  - dob: no rules
 #  - bio: no rules
 #  - image_url: no rules
+
+belongs_to :actor
+# character.actor
+
+belongs_to :movie
+# character.movie
 end
