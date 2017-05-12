@@ -36,7 +36,7 @@
           Actor
         </label>
 
-        <input type="text" id="actor_id" name="actor_id" placeholder="Actor" class="form-control" value="<%= @character.actor_id %>">
+          <%= select_tag(:actor_id, options_from_collection_for_select(Actor.all, :id, :name), :class=>"form-control") %>
       </div>
 
       <!-- Label and input for name -->
@@ -55,6 +55,8 @@
       <a href="/characters">Cancel</a>
       or
       <a href="/movies/new">Create a New Movie</a>
+      or
+      <a href="/actors/new">Create a New Actor</a>
     </form>
   </div>
 </div>

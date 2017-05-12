@@ -7,4 +7,7 @@ validates :name, :presence => true, :uniqueness => { :scope => :dob }
 # - image_url: no rules
 
 has_many :characters
+
+has_many :movies, :through => :characters
+
 end
